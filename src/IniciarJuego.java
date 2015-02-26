@@ -8,13 +8,14 @@ public class IniciarJuego {
     public String p1,p2,p3,pa1,pa2,pa3,pa4,pa5,pa6,pa7;
     public char[] pj1,pj2,pj3;
     public IniciarJuego(){
-
+        seleccionarNivel();
     }
     public int seleccionarNivel(){
         Scanner n = new Scanner(System.in);
         try {
             System.out.println("Seleccione un nivel del 1 al 3");
             nivel = n.nextInt();
+            iniciarJugadores();
         }catch(NumberFormatException e){
             System.out.println("Debe ingresar un nivel del 1 al 3 unicamente\n");
             seleccionarNivel();
@@ -41,6 +42,11 @@ public class IniciarJuego {
         System.out.println(p1.toUpperCase() + " ingrese las palabras a jugar");
         if(nivel == 1){
             System.out.println(p1.toUpperCase() + " ingrese la primera palabra");
+            pa1 = palabra.next();
+            System.out.println(p1.toUpperCase() + " ingrese la primera palabra");
+            pa2 = palabra.next();
+            System.out.println(p1.toUpperCase() + " ingrese la primera palabra");
+            pa3 = palabra.next();
         }
     }
 
