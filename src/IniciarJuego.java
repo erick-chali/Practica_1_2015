@@ -4,10 +4,14 @@ import java.util.Scanner;
  * Created by erickchali on 2/22/15.
  */
 public class IniciarJuego {
-    public int numeroJug, nivel;
-    public String p1,p2,p3,pa1,pa2,pa3,pa4,pa5,pa6,pa7;
-    public char[] pj1,pj2,pj3;
+    public int nivel;
+    public String p1,pa1,pa2,pa3;
+    public String[] palabras = {"hola","adios","erick","oso","ornitorrinco","edificio","edificacion","pincel","camello","perico"};
+    public String[] n1 = new String[3];
+    public String[] n2 = new String[5];
+    public String[] n3 = new String[7];
     public IniciarJuego(){
+
         seleccionarNivel();
     }
     public int seleccionarNivel(){
@@ -24,29 +28,26 @@ public class IniciarJuego {
     }
     public void iniciarJugadores(){
         Scanner j = new Scanner(System.in);
-        System.out.println("Ingrese el numero del primer jugador\n");
+        System.out.println("Ingrese su nombre del primer jugador\n");
         p1 = j.next();
-        System.out.println("Ingrese el numero del segundo jugador\n");
-        p2 = j.next();
-        System.out.println("Ingrese el numero del tercer jugador\n");
-        p3 = j.next();
-        if(p1.equals("")||p2.equals("")||p3.equals("")){
-            System.out.println("Debe ingresar los nombres de todos los jugadores\n");
+        if(p1.equals("")){
+            System.out.println("El jugador debe ingresar su nombre.\n");
             iniciarJugadores();
-        }else{
-            pedirPalabra();
+        }else {
+            generarPalabras();
         }
     }
-    public void pedirPalabra(){
+    public void generarPalabras(){
         Scanner palabra = new Scanner(System.in);
-        System.out.println(p1.toUpperCase() + " ingrese las palabras a jugar");
+        int posicion;
         if(nivel == 1){
-            System.out.println(p1.toUpperCase() + " ingrese la primera palabra");
-            pa1 = palabra.next();
-            System.out.println(p1.toUpperCase() + " ingrese la primera palabra");
-            pa2 = palabra.next();
-            System.out.println(p1.toUpperCase() + " ingrese la primera palabra");
-            pa3 = palabra.next();
+            for(int x=0;x<=2;x++){
+                posicion = (int)(Math.random()*9+1);
+                n1[x]=palabras[posicion];
+            }
+            for(int x=0;x<=2;x++){
+                System.out.println("Palabra: " + n1[x]);
+            }
         }
     }
 
