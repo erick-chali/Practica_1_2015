@@ -4,8 +4,8 @@ import java.util.Scanner;
  * Created by erickchali on 2/22/15.
  */
 public class IniciarJuego {
-    public int nivel,l1=3,l2=5,l3=7;
-    public String p1,pa1,pa2,pa3,palabra,man,manoi="\\",manod="/",centro="|",piei="_",pied="_",cabeza="O",cadena;
+    public int nivel;
+    public String p1,pa1,pa2,pa3,palabra,man,manoi="\\",manod="/",centro="|",piei="/",pied="\\",cabeza="O",cadena;
     public String[] palabras;
     public char[] construyendo;
     public String[] n1 = new String[3];
@@ -26,13 +26,13 @@ public class IniciarJuego {
         palabras[1] = "otornitorrinco";
         palabras[2] = "avion";
         palabras[3] = "computadora";
-        palabras[4] = "jimena";
+        palabras[4] = "litera";
         palabras[5] = "luminoso";
         palabras[6] = "variable";
         palabras[7] = "periferico";
         palabras[8] = "kilogramo";
         palabras[9] = "herencia";
-        man = manoi+cabeza+manod+"\n"+piei+centro+pied;
+        man = manoi+cabeza+manod+"\n"+" "+centro+"\n"+piei+" "+pied;
         n1[0] = "";
         n1[1] = "";
         n1[2] = "";

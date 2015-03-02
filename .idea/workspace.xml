@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b20bff7-4aba-4080-b222-7c91fd63e1b5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Practica_1_2015/IniciarJuego.class" afterPath="$PROJECT_DIR$/out/production/Practica_1_2015/IniciarJuego.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/IniciarJuego.java" afterPath="$PROJECT_DIR$/src/IniciarJuego.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Launcher.java" afterPath="$PROJECT_DIR$/src/Launcher.java" />
     </list>
     <ignored path="Practica_1_2015.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +71,11 @@
       <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="360">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#391#392#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
+                <element signature="e#390#391#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,10 +84,9 @@
       <file leaf-file-name="IniciarJuego.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IniciarJuego.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.142857" vertical-offset="740" max-vertical-offset="3495">
-              <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.45801526" vertical-offset="300" max-vertical-offset="3975">
+              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
               <folding>
-                <element signature="method#IniciarJuego#0;class#IniciarJuego#0" expanded="false" />
                 <element signature="method#verficarPalabraN1#0;class#IniciarJuego#0" expanded="false" />
                 <element signature="method#verficarPalabraN2#0;class#IniciarJuego#0" expanded="false" />
                 <element signature="method#verficarPalabraN3#0;class#IniciarJuego#0" expanded="false" />
@@ -400,7 +398,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -420,7 +418,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5625" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5880682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -460,8 +458,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="360">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -471,7 +469,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2595">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#IniciarJuego#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN1#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN2#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN3#0;class#IniciarJuego#0" expanded="false" />
@@ -484,8 +481,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="375">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -495,7 +492,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#IniciarJuego#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN1#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN2#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN3#0;class#IniciarJuego#0" expanded="false" />
@@ -508,8 +504,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="375">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -519,7 +515,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="885">
           <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
           <folding>
-            <element signature="method#IniciarJuego#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN1#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN2#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN3#0;class#IniciarJuego#0" expanded="false" />
@@ -532,8 +527,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="375">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -543,7 +538,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#IniciarJuego#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN1#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN2#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN3#0;class#IniciarJuego#0" expanded="false" />
@@ -556,8 +550,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="165">
           <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -567,7 +561,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#IniciarJuego#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN1#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN2#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN3#0;class#IniciarJuego#0" expanded="false" />
@@ -577,21 +570,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IniciarJuego.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.142857" vertical-offset="740" max-vertical-offset="3495">
-          <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.45801526" vertical-offset="300" max-vertical-offset="3975">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
           <folding>
-            <element signature="method#IniciarJuego#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN1#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN2#0;class#IniciarJuego#0" expanded="false" />
             <element signature="method#verficarPalabraN3#0;class#IniciarJuego#0" expanded="false" />

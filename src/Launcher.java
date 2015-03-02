@@ -4,7 +4,6 @@ import java.util.Scanner;
  * Created by erickchali on 2/22/15.
  */
 public class Launcher {
-
 //    public int numero(){
 //        Scanner s = new Scanner(System.in);
 //        int n = 0;
