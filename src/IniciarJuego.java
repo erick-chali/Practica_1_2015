@@ -5,11 +5,13 @@ import java.util.Scanner;
  */
 public class IniciarJuego {
     public int nivel,l1=3,l2=5,l3=7;
-    public String p1,pa1,pa2,pa3,palabra,man,manoi="\\",manod="/",centro="|",piei="_",pied="_",cabeza="O";
+    public String p1,pa1,pa2,pa3,palabra,man,manoi="\\",manod="/",centro="|",piei="_",pied="_",cabeza="O",cadena;
     public String[] palabras;
+    public char[] construyendo;
     public String[] n1 = new String[3];
     public String[] n2 = new String[5];
     public String[] n3 = new String[7];
+    public int vidas,puntos;
     public int[] niv1;
     public int[] niv2;
     public int[] niv3;
@@ -25,10 +27,10 @@ public class IniciarJuego {
         palabras[2] = "avion";
         palabras[3] = "computadora";
         palabras[4] = "jimena";
-        palabras[5] = "lugar";
+        palabras[5] = "luminoso";
         palabras[6] = "variable";
-        palabras[7] = "perico";
-        palabras[8] = "kilo";
+        palabras[7] = "periferico";
+        palabras[8] = "kilogramo";
         palabras[9] = "herencia";
         man = manoi+cabeza+manod+"\n"+piei+centro+pied;
         n2[0] = "";
@@ -103,21 +105,58 @@ public class IniciarJuego {
 
     private void jugarNivel1() {
         int longitud = 0,jugando;
-        String cadena = "";
+        cadena = "";
         for (int x=0;x<=2;x++){
-            longitud=n1[x].length();
             jugando=x;
             for (int y=0;y<n1[x].length();y++){
-                cadena = cadena + "_ ";
+                cadena = cadena + "_";
             }
             System.out.println(man+ "\n\n" +cadena);
-            pedirLetra(longitud,jugando);
+            pedirLetra(jugando);
             cadena = "";
         }
 
     }
 
-    private void pedirLetra(int longitud, int jugando) {
+    private void pedirLetra(int jugando) {
+        vidas=6;
+        cadena="";
+        construyendo = new char[n1[jugando].length()];
+        for (int x=0;x<n1[jugando].length();x++){
+            construyendo[x]= '_';
+        }
+        String letra = "";
+        char letter;
+        int position;
+        char[] palabraConvertida = n1[jugando].toCharArray();
+        Scanner entrada = new Scanner(System.in);
+        do{
+            System.out.println("Ingrese una letra para ver si existe.");
+            letter = entrada.next().charAt(0);
+            position = n1[jugando].indexOf(letter);
+            for (int x=0;x<n1[jugando].length();x++){
+                if(letter==palabraConvertida[x]){
+                    construyendo[x]=letter;
+
+                    puntos=puntos+1;
+                }
+            }
+            if (position<0){
+                vidas--;
+            }
+//            if(position<0){
+//                vidas--;
+//            }else{
+//                for (int x=0;x<n1[jugando].length();x++){
+//                    if(position==x){
+//                        construyendo[x]=letter;
+//                    }
+//                }
+//                puntos = puntos + 1;
+//            }
+            System.out.println(construyendo);
+        }while(vidas!=0);
+
 
     }
 
