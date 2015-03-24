@@ -4,14 +4,14 @@ import java.util.Scanner;
  * Created by erickchali on 2/22/15.
  */
 public class IniciarJuego {
-    public int nivel;
-    public String p1,pa1,pa2,pa3,palabra,man,manoi="\\",manod="/",centro="|",piei="/",pied="\\",cabeza="O",cadena;
+    public int nivel, perdidas=0, restantes, nump;
+    public String p1,man,manoi="\\",manod="/",centro="|",piei="/",pied="\\",cabeza="O",cadena;
     public String[] palabras;
     public char[] construyendo;
     public String[] n1 = new String[3];
     public String[] n2 = new String[5];
     public String[] n3 = new String[7];
-    public int vidas,puntos;
+    public int vidas,puntos=0;
     public int[] niv1;
     public int[] niv2;
     public int[] niv3;
@@ -22,12 +22,12 @@ public class IniciarJuego {
         niv2 = new int[5];
         niv3 = new int[7];
         palabras = new String[10];
-        palabras[0] = "oso";
+        palabras[0] = "zorra";
         palabras[1] = "otornitorrinco";
         palabras[2] = "avion";
         palabras[3] = "computadora";
         palabras[4] = "litera";
-        palabras[5] = "luminoso";
+        palabras[5] = "comida";
         palabras[6] = "variable";
         palabras[7] = "periferico";
         palabras[8] = "kilogramo";
@@ -116,10 +116,11 @@ public class IniciarJuego {
     }
 
     private void jugarNivel1() {
-        int longitud = 0,jugando;
+        int longitud = 1,jugando;
         cadena = "";
         for (int x=0;x<=2;x++){
             jugando=x;
+            nump++;
             for (int y=0;y<n1[x].length();y++){
                 cadena = cadena + "*";
             }
@@ -127,10 +128,13 @@ public class IniciarJuego {
             pedirLetra(jugando);
             cadena = "";
         }
-
+        System.out.println("Estadisticas finales:\nJugador: "+ p1 +"\nNivel jugado: "+ longitud + "\n" + "Total de palabras correctas: " + (nump-perdidas)
+                            + "\nTotal de palabras incorrectas: " + perdidas
+                            + "\nPunteo Total: " + puntos
+        );
     }
     private void jugarNivel2() {
-        int longitud = 0,jugando;
+        int longitud = 2,jugando;
         cadena = "";
         for (int x=0;x<=4;x++){
             jugando=x;
@@ -141,10 +145,14 @@ public class IniciarJuego {
             pedirLetra2(jugando);
             cadena = "";
         }
+        System.out.println("Estadisticas finales:\nJugador: "+ p1 +"\nNivel jugado: "+ longitud + "\n" + "Total de palabras correctas: " + (nump-perdidas)
+                        + "\nTotal de palabras incorrectas: " + perdidas
+                        + "\nPunteo Total: " + puntos
+        );
 
     }
     private void jugarNivel3() {
-        int longitud = 0,jugando;
+        int longitud = 3,jugando;
         cadena = "";
         for (int x=0;x<=6;x++){
             jugando=x;
@@ -155,6 +163,10 @@ public class IniciarJuego {
             pedirLetra3(jugando);
             cadena = "";
         }
+        System.out.println("Estadisticas finales:\nJugador: "+ p1 +"\nNivel jugado: "+ longitud + "\n" + "Total de palabras correctas: " + (nump-perdidas)
+                        + "\nTotal de palabras incorrectas: " + perdidas
+                        + "\nPunteo Total: " + puntos
+        );
 
     }
 
@@ -176,18 +188,28 @@ public class IniciarJuego {
             position = n1[jugando].indexOf(letter);
             for (int x=0;x<n1[jugando].length();x++){
                 if(letter==palabraConvertida[x]){
-                    construyendo[x]=letter;
 
-                    puntos=puntos+1;
+                    System.out.println("La letra existe ");
+                    construyendo[x]=letter;
+                    restantes++;
+                    puntos++;
                 }
             }
             if (position<0){
+                System.out.println("La letra no existe :(");
                 vidas--;
+                if(vidas==0){
+                    System.out.println("Se le acabaron los intentos :( intente con la siguiente palabra.");
+                    perdidas++;
+                }
             }
+            if (restantes==n1[jugando].length()){
+                vidas=0;
+            }
+//            restantes=0;
             System.out.println(construyendo);
         }while(vidas!=0);
-
-
+        restantes=0;
     }
     private void pedirLetra2(int jugando) {
         vidas=6;
@@ -207,23 +229,33 @@ public class IniciarJuego {
             position = n2[jugando].indexOf(letter);
             for (int x=0;x<n2[jugando].length();x++){
                 if(letter==palabraConvertida[x]){
-                    construyendo[x]=letter;
 
-                    puntos=puntos+1;
+                    System.out.println("La letra existe ");
+                    construyendo[x]=letter;
+                    restantes++;
+                    puntos++;
                 }
             }
             if (position<0){
+                System.out.println("La letra no existe :(");
                 vidas--;
+                if(vidas==0){
+                    System.out.println("Se le acabaron los intentos :( intente con la siguiente palabra.");
+                    perdidas++;
+                }
             }
+            if (restantes==n2[jugando].length()){
+                vidas=0;
+            }
+//            restantes=0;
             System.out.println(construyendo);
         }while(vidas!=0);
-
-
+        restantes=0;
     }
     private void pedirLetra3(int jugando) {
         vidas=6;
         cadena="";
-        construyendo = new char[n3[jugando].length()];
+        construyendo = new char[n1[jugando].length()];
         for (int x=0;x<n3[jugando].length();x++){
             construyendo[x]= '*';
         }
@@ -238,18 +270,28 @@ public class IniciarJuego {
             position = n3[jugando].indexOf(letter);
             for (int x=0;x<n3[jugando].length();x++){
                 if(letter==palabraConvertida[x]){
-                    construyendo[x]=letter;
 
-                    puntos=puntos+1;
+                    System.out.println("La letra existe ");
+                    construyendo[x]=letter;
+                    restantes++;
+                    puntos++;
                 }
             }
             if (position<0){
+                System.out.println("La letra no existe :(");
                 vidas--;
+                if(vidas==0){
+                    System.out.println("Se le acabaron los intentos :( intente con la siguiente palabra.");
+                    perdidas++;
+                }
             }
+            if (restantes==n3[jugando].length()){
+                vidas=0;
+            }
+//            restantes=0;
             System.out.println(construyendo);
         }while(vidas!=0);
-
-
+        restantes=0;
     }
 
     private boolean verficarPalabraN1(int posicion) {
